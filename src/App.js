@@ -16,9 +16,19 @@ export default function App() {
   return (
     <div className="App">
       <div>
-        <button onClick={() => setStep((s) => s - 1)}>-</button>
-        <span>step:{Step}</span>
-        <button onClick={() => setStep((s) => s + 1)}>+</button>
+        <button
+          onClick={() => setStep((s) => s - 1)}
+          style={{ margin: "0 10px", padding: "5px 10px", fontSize: "16px" }}
+        >
+          -
+        </button>
+        <span>step: {Step}</span>
+        <button
+          onClick={() => setStep((s) => s + 1)}
+          style={{ margin: "0 10px", padding: "5px 10px", fontSize: "16px" }}
+        >
+          +
+        </button>
       </div>
       <div>
         <button onClick={handleDec}>-</button>
