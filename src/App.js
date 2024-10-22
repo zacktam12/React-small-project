@@ -3,17 +3,23 @@ import "./App.css";
 
 export default function App() {
   const [Count, setCount] = useState(0);
+  const [Step, setStep] = useState(1);
   const date = new Date("june 21 2021");
   date.setDate(date.getDate() + Count);
 
   function handleDec() {
-    setCount((c) => c - 1);
+    setCount((c) => c - Step);
   }
   function handleAdd() {
-    setCount((s) => s + 1);
+    setCount((s) => s + Step);
   }
   return (
     <div className="App">
+      <div>
+        <button onClick={() => setStep((s) => s - 1)}>-</button>
+        <span>step:{Step}</span>
+        <button onClick={() => setStep((s) => s + 1)}>+</button>
+      </div>
       <div>
         <button onClick={handleDec}>-</button>
         <span>Count:{Count}</span>
